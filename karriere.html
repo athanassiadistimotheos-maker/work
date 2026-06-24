@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karriere - Acar Group GmbH</title>
+    <meta name="description" content="Jetzt bei der Acar Group bewerben - Transport, Logistik, Security und Verwaltung." />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="karriere">
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header data-site-header></header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="site-shell panel">
+          <div class="eyebrow">Karriere</div>
+          <h1>Werde Teil der Acar Group.</h1>
+          <p>
+            Ob Transport, Logistik, Security oder Verwaltung - bei der Acar Group erwarten dich klare Strukturen,
+            faire Vergütung, moderne Arbeitsmittel und ein Team, das Leistung wertschätzt.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell grid grid-3">
+          <article class="card reveal"><h3>Transport / Logistik</h3><p>Für Fahrer, Zustellung und operative Abläufe.</p></article>
+          <article class="card reveal"><h3>Paketzusteller</h3><p>Im direkten Kundenkontakt und mit klarer Tourenstruktur.</p></article>
+          <article class="card reveal"><h3>Dispatcher</h3><p>Steuerung und Koordination im täglichen Betrieb.</p></article>
+          <article class="card reveal"><h3>Security</h3><p>Objekt, Werk, Empfang und Zutrittskontrolle.</p></article>
+          <article class="card reveal"><h3>Personal / Verwaltung</h3><p>Organisierte Prozesse im Backoffice und HR-Umfeld.</p></article>
+          <article class="card reveal"><h3>Sonstiges</h3><p>Auch Quereinsteiger finden passende Möglichkeiten.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell split">
+          <article class="card reveal">
+            <h2>Deine Vorteile</h2>
+            <div class="badge-row" style="margin-top:18px">
+              <span class="badge">Faire Vergütung</span>
+              <span class="badge">Moderne Arbeitsmittel</span>
+              <span class="badge">Dienstkleidung</span>
+              <span class="badge">Digitale Zeiterfassung per App</span>
+            </div>
+            <div class="hero-actions" style="margin-top:20px">
+              <a class="button button-primary" href="#bewerbung">Jetzt schnell bewerben</a>
+              <a class="button button-secondary" href="mailto:info@acargroup.de">E-Mail schreiben</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h2>Operatives Umfeld</h2>
+            <div class="visual-media driver-image" style="margin-top:18px; min-height: 520px;">
+              <div class="visual-caption">
+                <strong>Operatives Umfeld</strong>
+                <p style="color: rgba(255, 255, 255, 0.78); max-width: 40ch">
+                  Fahrer und operative Teams arbeiten mit klaren Strukturen, moderner Ausstattung und Verantwortung.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="bewerbung">
+        <div class="site-shell split">
+          <article class="card reveal">
+            <h2>Bewerbungsformular</h2>
+            <form class="form" data-mailto="info@acargroup.de" data-subject="Bewerbung bei der Acar Group">
+              <div class="field-row">
+                <div class="field"><label for="name">Name</label><input id="name" name="Name" required /></div>
+                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="email">E-Mail</label><input id="email" name="E-Mail" type="email" required /></div>
+                <div class="field"><label for="city">Wohnort</label><input id="city" name="Wohnort" /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="experience">Berufserfahrung</label><input id="experience" name="Berufserfahrung" /></div>
+                <div class="field"><label for="license">Führerscheinklasse</label><input id="license" name="Fuehrerscheinklasse" /></div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="area">Gewünschter Bereich</label>
+                  <select id="area" name="Gewuenschter Bereich">
+                    <option>Transport / Logistik</option>
+                    <option>Paketzusteller</option>
+                    <option>Dispatcher</option>
+                    <option>Security</option>
+                    <option>Personal / Verwaltung</option>
+                    <option>Sonstiges</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="cv">Lebenslauf-Upload</label>
+                  <input id="cv" name="Lebenslauf" type="file" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="Nachricht" placeholder="Erzähle uns kurz mehr über dich."></textarea>
+              </div>
+              <button class="button button-primary" type="submit">Bewerbung absenden</button>
+              <div class="form-status" data-form-status></div>
+              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet.</p>
+            </form>
+          </article>
+          <article class="card reveal">
+            <h2>Arbeitsplatz</h2>
+            <div class="image-stack" style="margin-top:18px">
+              <div class="image-card"><strong>Team</strong><span>Professionelles Arbeitsumfeld mit klaren Strukturen</span></div>
+              <div class="image-card"><strong>Karriere</strong><span>Operative Rollen mit Perspektive</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer data-site-footer></footer>
+  </body>
+</html>

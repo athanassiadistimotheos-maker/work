@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kundenanfrage - Acar Group GmbH</title>
+    <meta name="description" content="Ihre Express-Anfrage an die Acar Group - schnell und direkt an info@acargroup.de." />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="kundenanfrage">
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header data-site-header></header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="site-shell panel">
+          <div class="eyebrow">Kundenanfrage</div>
+          <h1>Ihre Express-Anfrage an die Acar Group.</h1>
+          <p>
+            Schicken Sie uns die Eckdaten Ihres Projekts - wir melden uns mit einem klaren, operativen Vorschlag für
+            Transport, Personal, Security oder eine Komplettdienstleistung.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell split">
+          <article class="card reveal">
+            <h2>Anfrageformular</h2>
+            <form class="form" data-mailto="info@acargroup.de" data-subject="Kundenanfrage an die Acar Group">
+              <div class="field-row">
+                <div class="field"><label for="company">Firmenname</label><input id="company" name="Firmenname" required /></div>
+                <div class="field"><label for="contact">Ansprechpartner</label><input id="contact" name="Ansprechpartner" required /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required /></div>
+                <div class="field"><label for="mail">E-Mail-Adresse</label><input id="mail" name="E-Mail" type="email" required /></div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="service">Gewünschte Dienstleistung</label>
+                  <select id="service" name="Gewuenschte Dienstleistung">
+                    <option>Transport</option>
+                    <option>Personal</option>
+                    <option>Security</option>
+                    <option>Komplettdienstleistung</option>
+                  </select>
+                </div>
+                <div class="field"><label for="scale">Mitarbeiterbedarf / Projektumfang</label><input id="scale" name="Mitarbeiterbedarf / Projektumfang" /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="location">Einsatzort</label><input id="location" name="Einsatzort" /></div>
+                <div class="field"><label for="start">Geplanter Starttermin</label><input id="start" name="Geplanter Starttermin" type="date" /></div>
+              </div>
+              <div class="field">
+                <label for="request">Nachricht</label>
+                <textarea id="request" name="Nachricht" placeholder="Beschreiben Sie kurz den Bedarf."></textarea>
+              </div>
+              <button class="button button-primary" type="submit">Anfrage senden</button>
+              <div class="form-status" data-form-status></div>
+              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet.</p>
+            </form>
+          </article>
+          <article class="card reveal">
+            <h2>Was wir dafür brauchen</h2>
+            <ul class="list" style="margin-top:18px">
+              <li>Kurze Beschreibung des Projekts</li>
+              <li>Ort, Starttermin und gewünschte Dienstleistung</li>
+              <li>Umfang, Mengen und Besonderheiten</li>
+              <li>Ansprechpartner für die Rückmeldung</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer data-site-footer></footer>
+  </body>
+</html>

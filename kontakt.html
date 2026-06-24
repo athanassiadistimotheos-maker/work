@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt - Acar Group GmbH</title>
+    <meta name="description" content="Kontakt zur Acar Group GmbH in Erlensee." />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="kontakt">
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header data-site-header></header>
+    <main id="main">
+      <section class="page-hero">
+        <div class="site-shell panel">
+          <div class="eyebrow">Kontakt</div>
+          <h1>Kontakt aufnehmen.</h1>
+          <p>
+            Acar Group GmbH, Weingartenstraße 19, 63526 Erlensee. Wir sind montags bis freitags von 08:00 bis 17:00 Uhr
+            erreichbar.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell split">
+          <article class="card reveal">
+            <h2>Kontaktdaten</h2>
+            <div class="contact-card" style="margin-top:18px">
+              <div class="contact-line"><span>Adresse</span><strong>Weingartenstraße 19, 63526 Erlensee</strong></div>
+              <div class="contact-line"><span>E-Mail</span><strong><a href="mailto:info@acargroup.de">info@acargroup.de</a></strong></div>
+              <div class="contact-line"><span>Erreichbarkeit</span><strong>Mo-Fr, 08:00-17:00 Uhr</strong></div>
+            </div>
+            <div class="hero-actions" style="margin-top:20px">
+              <a class="button button-primary" href="kundenanfrage.html">Angebot anfordern</a>
+              <a class="button button-secondary" href="karriere.html">Bewerben</a>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h2>Anfahrt</h2>
+            <div class="map-placeholder" style="margin-top:18px"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell split">
+          <article class="card reveal">
+            <h2>Kontaktformular</h2>
+            <form class="form" data-mailto="info@acargroup.de" data-subject="Kontaktanfrage">
+              <div class="field-row">
+                <div class="field"><label for="cname">Name</label><input id="cname" name="Name" required /></div>
+                <div class="field"><label for="cmail">E-Mail</label><input id="cmail" name="E-Mail" type="email" required /></div>
+              </div>
+              <div class="field"><label for="ctext">Nachricht</label><textarea id="ctext" name="Nachricht"></textarea></div>
+              <button class="button button-primary" type="submit">Kontakt senden</button>
+              <div class="form-status" data-form-status></div>
+            </form>
+          </article>
+          <article class="card reveal">
+            <h2>Schnelle Wege</h2>
+            <div class="hero-actions" style="margin-top:18px">
+              <a class="button button-secondary" href="mailto:info@acargroup.de">E-Mail</a>
+              <a class="button button-secondary" href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
+              <a class="button button-primary" href="kundenanfrage.html">Angebot anfordern</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer data-site-footer></footer>
+  </body>
+</html>
