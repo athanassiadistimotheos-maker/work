@@ -45,7 +45,7 @@ function renderHeader() {
         <div class="header-card">
           <a class="brand" href="index.html" aria-label="Acar Group Startseite">
             <span class="brand-logo" aria-hidden="true">
-              <img src="logos/silver.png" alt="" />
+              <img src="silver.png" alt="" />
             </span>
             <span class="brand-copy">
               <strong>Acar Group GmbH</strong>
@@ -101,7 +101,7 @@ function renderFooter() {
             <div>
             <div class="brand footer-brand-wrap">
               <span class="brand-logo brand-logo-footer" aria-hidden="true">
-                <img src="logos/silver.png" alt="" />
+                <img src="silver.png" alt="" />
               </span>
               <p class="footer-brand">Acar Group GmbH</p>
             </div>
