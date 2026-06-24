@@ -492,7 +492,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.16), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.42)),
-    url('assets/hero-logistics.png') center right / cover no-repeat;
+    url('hero-logistics.png') center right / cover no-repeat;
 }
 
 .visual-media.fleet-image {
@@ -500,7 +500,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.08), rgba(8, 10, 12, 0.36)),
-    url('assets/fleet.png') center center / cover no-repeat;
+    url('fleet.png') center center / cover no-repeat;
 }
 
 .visual-media.driver-image {
@@ -508,7 +508,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.08), rgba(8, 10, 12, 0.36)),
-    url('assets/driver.png') center center / cover no-repeat;
+    url('driver.png') center center / cover no-repeat;
 }
 
 .visual-media.dispatch-image {
@@ -516,7 +516,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.08), rgba(8, 10, 12, 0.36)),
-    url('assets/dispatch.png') center center / cover no-repeat;
+    url('dispatch.png') center center / cover no-repeat;
 }
 
 .visual-media.security-image {
@@ -524,7 +524,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.08), rgba(8, 10, 12, 0.36)),
-    url('assets/security.png') center center / cover no-repeat;
+    url('security.png') center center / cover no-repeat;
 }
 
 .visual-media.location-image {
@@ -532,7 +532,7 @@ p {
   background:
     linear-gradient(180deg, rgba(8, 10, 12, 0.12), rgba(8, 10, 12, 0.72)),
     linear-gradient(90deg, rgba(8, 10, 12, 0.08), rgba(8, 10, 12, 0.36)),
-    url('assets/location.png') center center / cover no-repeat;
+    url('location.png') center center / cover no-repeat;
 }
 
 .visual-media::after {
