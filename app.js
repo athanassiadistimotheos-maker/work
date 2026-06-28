@@ -1,4 +1,4 @@
-const siteData = {
+﻿const siteData = {
   nav: [
     { label: 'Startseite', href: 'index.html' },
     { label: 'Über uns', href: 'ueber-uns.html' },
@@ -41,49 +41,64 @@ function renderHeader() {
 
   header.classList.add('site-header');
   header.innerHTML = `
-    <div class="container">
+    <div class="utility-bar">
+      <div class="container utility-inner">
+        <div class="utility-left">
+          <span>Deutschlandweit aktiv</span>
+          <span>Rhein-Main als Basis</span>
+        </div>
+        <div class="utility-right">
+          <a href="tel:+4961838994640">+49 6183 899 46 40</a>
+          <a href="mailto:info@acargroup.de">info@acargroup.de</a>
+          <a class="utility-link" href="kontakt.html">Jetzt Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-bar">
+      <div class="container">
         <div class="header-card">
           <a class="brand" href="index.html" aria-label="Acar Group Startseite">
             <span class="brand-logo" aria-hidden="true">
-              <img src="silver.png" alt="" />
+              <img src="logos/silver.png" alt="" />
             </span>
             <span class="brand-copy">
               <strong>Acar Group GmbH</strong>
               <span>Transport · Personal · Security · Outsourcing</span>
             </span>
           </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
-          <span aria-hidden="true"></span>
-        </button>
-        <nav class="site-nav" id="primary-nav" data-nav>
-          <ul class="nav-list">
-            ${siteData.nav
-              .map((item) => {
-                const active = isActive(item.href) ? 'active' : '';
-                if (!item.children) {
-                  return `<li class="nav-item"><a class="nav-link ${active}" ${active ? 'aria-current="page"' : ''} href="${item.href}">${item.label}</a></li>`;
-                }
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+            <span aria-hidden="true"></span>
+          </button>
+          <nav class="site-nav" id="primary-nav" data-nav>
+            <ul class="nav-list">
+              ${siteData.nav
+                .map((item) => {
+                  const active = isActive(item.href) ? 'active' : '';
+                  if (!item.children) {
+                    return `<li class="nav-item"><a class="nav-link ${active}" ${active ? 'aria-current="page"' : ''} href="${item.href}">${item.label}</a></li>`;
+                  }
 
-                return `
-                  <li class="nav-item has-dropdown">
-                    <a class="nav-link ${active}" ${active ? 'aria-current="page"' : ''} href="${item.href}">${item.label}</a>
-                    <ul class="dropdown">
-                      ${item.children
-                        .map(
-                          (child) =>
-                            `<li><a href="${child.href}" class="${isActive(child.href) ? 'active' : ''}" ${isActive(child.href) ? 'aria-current="page"' : ''}>${child.label}</a></li>`,
-                        )
-                        .join('')}
-                    </ul>
-                  </li>
-                `;
-              })
-              .join('')}
-          </ul>
-          <div class="nav-actions">
-            <a class="button button-primary" href="kundenanfrage.html">Angebot anfordern</a>
-          </div>
-        </nav>
+                  return `
+                    <li class="nav-item has-dropdown">
+                      <a class="nav-link ${active}" ${active ? 'aria-current="page"' : ''} href="${item.href}">${item.label}</a>
+                      <ul class="dropdown">
+                        ${item.children
+                          .map(
+                            (child) =>
+                              `<li><a href="${child.href}" class="${isActive(child.href) ? 'active' : ''}" ${isActive(child.href) ? 'aria-current="page"' : ''}>${child.label}</a></li>`,
+                          )
+                          .join('')}
+                      </ul>
+                    </li>
+                  `;
+                })
+                .join('')}
+            </ul>
+            <div class="nav-actions">
+              <a class="button button-primary" href="kundenanfrage.html">Kontakt</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   `;
@@ -96,28 +111,29 @@ function renderFooter() {
   footer.classList.add('site-footer');
   footer.innerHTML = `
     <div class="container">
-        <div class="footer">
-          <div class="footer-grid">
-            <div>
+      <div class="footer-shell">
+        <div class="footer-grid">
+          <div>
             <div class="brand footer-brand-wrap">
               <span class="brand-logo brand-logo-footer" aria-hidden="true">
-                <img src="silver.png" alt="" />
+                <img src="logos/silver.png" alt="" />
               </span>
               <p class="footer-brand">Acar Group GmbH</p>
             </div>
             <p>Weingartenstraße 19<br />63526 Erlensee<br />info@acargroup.de</p>
           </div>
           <div>
+            <h3 style="font-size:1.05rem;margin-bottom:12px">Navigation</h3>
+            <div class="footer-links">
+              ${siteData.footerLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join('')}
+            </div>
+          </div>
+          <div>
             <h3 style="font-size:1.05rem;margin-bottom:12px">Kontakt</h3>
             <div class="footer-links">
               <a href="kontakt.html">Kontakt</a>
               <a href="mailto:info@acargroup.de">info@acargroup.de</a>
-            </div>
-          </div>
-          <div>
-            <h3 style="font-size:1.05rem;margin-bottom:12px">Navigation</h3>
-            <div class="footer-links">
-              ${siteData.footerLinks.map((link) => `<a href="${link.href}">${link.label}</a>`).join('')}
+              <a href="tel:+4961838994640">+49 6183 899 46 40</a>
             </div>
           </div>
         </div>
@@ -126,7 +142,6 @@ function renderFooter() {
           <small>ANÜ-Erlaubnis · § 34a GewO · Digitale Zeiterfassung · Moderne Flotte</small>
         </div>
       </div>
-    </div>
   `;
 }
 
