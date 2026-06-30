@@ -17,7 +17,6 @@ const siteData = {
       children: [
         { label: 'Transport & Expresslogistik', href: 'transport-expresslogistik.html' },
         { label: 'Personaldienstleistungen', href: 'personaldienstleistungen.html' },
-        { label: 'Security Management', href: 'security-management.html' },
         { label: 'Komplettdienstleistungen', href: 'komplettdienstleistungen.html' },
       ],
     },
@@ -40,7 +39,6 @@ const servicePages = new Set([
   'leistungen.html',
   'transport-expresslogistik.html',
   'personaldienstleistungen.html',
-  'security-management.html',
   'komplettdienstleistungen.html',
 ]);
 
@@ -72,7 +70,7 @@ function renderHeader() {
             </span>
             <span class="brand-copy">
               <strong>Acar Group GmbH</strong>
-              <span>Transport · Personal · Security · Outsourcing</span>
+              <span>Transport · Personal · Komplettlösungen</span>
             </span>
           </a>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
