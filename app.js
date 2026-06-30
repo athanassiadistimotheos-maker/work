@@ -1,4 +1,13 @@
-﻿const siteData = {
+const contactInfo = {
+  phoneDisplay: '+49 123 456 78 90',
+  phoneHref: 'tel:+491234567890',
+  email: 'demo@example.com',
+  addressLine1: 'Musterstraße 12',
+  addressLine2: '12345 Musterstadt',
+  city: 'Musterstadt',
+};
+
+const siteData = {
   nav: [
     { label: 'Startseite', href: 'index.html' },
     { label: 'Über uns', href: 'ueber-uns.html' },
@@ -45,11 +54,11 @@ function renderHeader() {
       <div class="container utility-inner">
         <div class="utility-left">
           <span>Deutschlandweit aktiv</span>
-          <span>Rhein-Main als Basis</span>
+          <span>${contactInfo.city} als Basis</span>
         </div>
         <div class="utility-right">
-          <a href="tel:+4961838994640">+49 6183 899 46 40</a>
-          <a href="mailto:info@acargroup.de">info@acargroup.de</a>
+          <a href="${contactInfo.phoneHref}">${contactInfo.phoneDisplay}</a>
+          <a href="mailto:${contactInfo.email}">${contactInfo.email}</a>
           <a class="utility-link" href="kontakt.html">Jetzt Kontakt aufnehmen</a>
         </div>
       </div>
@@ -120,7 +129,7 @@ function renderFooter() {
               </span>
               <p class="footer-brand">Acar Group GmbH</p>
             </div>
-            <p>Weingartenstraße 19<br />63526 Erlensee<br />info@acargroup.de</p>
+            <p>${contactInfo.addressLine1}<br />${contactInfo.addressLine2}<br />${contactInfo.email}</p>
           </div>
           <div>
             <h3 style="font-size:1.05rem;margin-bottom:12px">Navigation</h3>
@@ -132,8 +141,8 @@ function renderFooter() {
             <h3 style="font-size:1.05rem;margin-bottom:12px">Kontakt</h3>
             <div class="footer-links">
               <a href="kontakt.html">Kontakt</a>
-              <a href="mailto:info@acargroup.de">info@acargroup.de</a>
-              <a href="tel:+4961838994640">+49 6183 899 46 40</a>
+              <a href="mailto:${contactInfo.email}">${contactInfo.email}</a>
+              <a href="${contactInfo.phoneHref}">${contactInfo.phoneDisplay}</a>
             </div>
           </div>
         </div>
@@ -142,6 +151,7 @@ function renderFooter() {
           <small>ANÜ-Erlaubnis · § 34a GewO · Digitale Zeiterfassung · Moderne Flotte</small>
         </div>
       </div>
+    </div>
   `;
 }
 
