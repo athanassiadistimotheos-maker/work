@@ -66,7 +66,8 @@ function renderHeader() {
         <div class="header-card">
           <a class="brand" href="index.html" aria-label="Acar Group Startseite">
             <span class="brand-logo" aria-hidden="true">
-              <img src="logos/silver.png" alt="" />
+              <span class="brand-fallback">AG</span>
+              <img src="logos/silver.png" alt="" data-brand-image />
             </span>
             <span class="brand-copy">
               <strong>Acar Group GmbH</strong>
@@ -122,8 +123,9 @@ function renderFooter() {
         <div class="footer-grid">
           <div>
             <div class="brand footer-brand-wrap">
-              <span class="brand-logo brand-logo-footer" aria-hidden="true">
-                <img src="logos/silver.png" alt="" />
+            <span class="brand-logo brand-logo-footer" aria-hidden="true">
+                <span class="brand-fallback">AG</span>
+                <img src="logos/silver.png" alt="" data-brand-image />
               </span>
               <p class="footer-brand">Acar Group GmbH</p>
             </div>
@@ -201,7 +203,7 @@ function setupForms() {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
 
-      const recipient = form.dataset.mailto;
+      const recipient = form.dataset.mailto === 'contact' ? contactInfo.email : form.dataset.mailto || contactInfo.email;
       const mailto = mailtoLink(form, recipient);
       window.location.href = mailto;
 
@@ -210,6 +212,36 @@ function setupForms() {
       }
       form.reset();
     });
+  });
+}
+
+function hydrateContactInfo() {
+  document.querySelectorAll('[data-contact-email]').forEach((element) => {
+    element.textContent = contactInfo.email;
+    if (element instanceof HTMLAnchorElement) {
+      element.href = `mailto:${contactInfo.email}`;
+    }
+  });
+
+  document.querySelectorAll('[data-contact-email-href]').forEach((element) => {
+    if (element instanceof HTMLAnchorElement) {
+      element.href = `mailto:${contactInfo.email}`;
+    }
+  });
+
+  document.querySelectorAll('[data-contact-phone]').forEach((element) => {
+    element.textContent = contactInfo.phoneDisplay;
+    if (element instanceof HTMLAnchorElement) {
+      element.href = contactInfo.phoneHref;
+    }
+  });
+
+  document.querySelectorAll('[data-contact-address]').forEach((element) => {
+    element.textContent = `${contactInfo.addressLine1}, ${contactInfo.addressLine2}`;
+  });
+
+  document.querySelectorAll('[data-contact-city]').forEach((element) => {
+    element.textContent = contactInfo.city;
   });
 }
 
@@ -237,16 +269,39 @@ function setYear() {
   if (year) year.textContent = String(new Date().getFullYear());
 }
 
+function setupBrandFallback() {
+  document.querySelectorAll('[data-brand-image]').forEach((img) => {
+    const host = img.closest('.brand-logo');
+    if (!host) return;
+
+    const showFallback = () => host.classList.add('brand-logo--broken');
+    const hideFallback = () => host.classList.add('brand-logo--loaded');
+
+    if (img instanceof HTMLImageElement) {
+      if (img.complete && img.naturalWidth > 0) {
+        hideFallback();
+      } else {
+        img.addEventListener('load', hideFallback, { once: true });
+        img.addEventListener('error', showFallback, { once: true });
+      }
+    }
+  });
+}
+
 function upgradeContainers() {
   document.querySelectorAll('.site-shell').forEach((element) => {
     element.classList.add('container');
   });
 }
 
-renderHeader();
-renderFooter();
-upgradeContainers();
-setupNav();
-setupForms();
-setupReveal();
-setYear();
+document.addEventListener('DOMContentLoaded', () => {
+  renderHeader();
+  renderFooter();
+  upgradeContainers();
+  setupNav();
+  setupForms();
+  hydrateContactInfo();
+  setupReveal();
+  setupBrandFallback();
+  setYear();
+});

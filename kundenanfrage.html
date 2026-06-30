@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kundenanfrage - Acar Group GmbH</title>
-    <meta name="description" content="Ihre Express-Anfrage an die Acar Group - schnell und direkt an demo@example.com." />
+    <meta name="description" content="Ihre Express-Anfrage an die Acar Group - schnell und direkt." />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="app.js"></script>
   </head>
@@ -17,8 +17,8 @@
           <div class="eyebrow">Kundenanfrage</div>
           <h1>Ihre Express-Anfrage an die Acar Group.</h1>
           <p>
-            Schicken Sie uns die Eckdaten Ihres Projekts - wir melden uns mit einem klaren, operativen Vorschlag für
-            Transport, Personal oder eine Komplettdienstleistung.
+            Schicken Sie uns die Eckdaten Ihres Projekts - wir melden uns mit einer klaren operativen Einschätzung
+            und einem Vorschlag für Transport, Personal oder eine Komplettdienstleistung.
           </p>
         </div>
       </section>
@@ -27,14 +27,14 @@
         <div class="site-shell split">
           <article class="card reveal">
             <h2>Anfrageformular</h2>
-            <form class="form" data-mailto="demo@example.com" data-subject="Kundenanfrage an die Acar Group">
+            <form class="form" data-mailto="contact" data-subject="Kundenanfrage an die Acar Group">
               <div class="field-row">
-                <div class="field"><label for="company">Firmenname</label><input id="company" name="Firmenname" required /></div>
-                <div class="field"><label for="contact">Ansprechpartner</label><input id="contact" name="Ansprechpartner" required /></div>
+                <div class="field"><label for="company">Firmenname</label><input id="company" name="Firmenname" required placeholder="Firmenname" /></div>
+                <div class="field"><label for="contact">Ansprechpartner</label><input id="contact" name="Ansprechpartner" required placeholder="Ansprechpartner" /></div>
               </div>
               <div class="field-row">
-                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required /></div>
-                <div class="field"><label for="mail">E-Mail-Adresse</label><input id="mail" name="E-Mail" type="email" required /></div>
+                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required placeholder="+49 ..." /></div>
+                <div class="field"><label for="mail">E-Mail-Adresse</label><input id="mail" name="E-Mail" type="email" required placeholder="name@example.com" /></div>
               </div>
               <div class="field-row">
                 <div class="field">
@@ -46,19 +46,25 @@
                     <option>Sonstiges</option>
                   </select>
                 </div>
-                <div class="field"><label for="scale">Mitarbeiterbedarf / Projektumfang</label><input id="scale" name="Mitarbeiterbedarf / Projektumfang" /></div>
+                <div class="field"><label for="scale">Mitarbeiterbedarf / Projektumfang</label><input id="scale" name="Mitarbeiterbedarf / Projektumfang" placeholder="z. B. 5 Fahrer, 2 Wochen" /></div>
               </div>
               <div class="field-row">
-                <div class="field"><label for="location">Einsatzort</label><input id="location" name="Einsatzort" /></div>
+                <div class="field"><label for="location">Einsatzort</label><input id="location" name="Einsatzort" placeholder="Ort / Region" /></div>
                 <div class="field"><label for="start">Geplanter Starttermin</label><input id="start" name="Geplanter Starttermin" type="date" /></div>
               </div>
               <div class="field">
                 <label for="request">Nachricht</label>
-                <textarea id="request" name="Nachricht" placeholder="Beschreiben Sie kurz den Bedarf."></textarea>
+                <textarea id="request" name="Nachricht" placeholder="Beschreiben Sie kurz den Bedarf, den Einsatzort, den Zeitraum und besondere Anforderungen. Je konkreter die Angaben, desto schneller können wir einschätzen, welches Modell passt."></textarea>
+              </div>
+              <div class="field">
+                <label>
+                  <input type="checkbox" required />
+                  Ich habe die Datenschutzhinweise zur Kenntnis genommen.
+                </label>
               </div>
               <button class="button button-primary" type="submit">Anfrage senden</button>
               <div class="form-status" data-form-status></div>
-              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet.</p>
+              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet. Alternativ können Sie uns direkt per E-Mail kontaktieren.</p>
             </form>
           </article>
           <article class="card reveal">
@@ -68,6 +74,7 @@
               <li>Ort, Starttermin und gewünschte Dienstleistung</li>
               <li>Umfang, Mengen und Besonderheiten</li>
               <li>Ansprechpartner für die Rückmeldung</li>
+              <li>Zeitrahmen und gewünschte Reaktionsgeschwindigkeit</li>
             </ul>
           </article>
         </div>

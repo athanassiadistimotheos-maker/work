@@ -17,8 +17,8 @@
           <div class="eyebrow">Karriere</div>
           <h1>Werde Teil eines Teams, das Dinge zuverlässig ins Rollen bringt.</h1>
           <p>
-            Ob Transport, Logistik oder Verwaltung - bei der Acar Group erwarten dich klare Strukturen, faire
-            Vergütung, moderne Arbeitsmittel und ein Team, das gute Arbeit wirklich wertschätzt.
+            Ob Transport, Logistik oder operative Unterstützung - bei der Acar Group erwarten dich klare Strukturen,
+            faire Vergütung, moderne Arbeitsmittel und ein Team, das gute Arbeit wirklich wertschätzt.
           </p>
         </div>
       </section>
@@ -40,17 +40,20 @@
             <h2>Deine Vorteile</h2>
             <p style="margin-top:18px">
               Du willst einen Job, der Sinn ergibt, planbar ist und nicht ständig neu erklärt werden muss? Genau dort
-              setzen wir an.
+              setzen wir an. Bei uns bekommst du klare Aufgaben, direkte Ansprechpartner und ein Umfeld, in dem
+              Zuverlässigkeit zählt.
             </p>
             <div class="badge-row" style="margin-top:18px">
               <span class="badge">Faire Vergütung</span>
               <span class="badge">Moderne Arbeitsmittel</span>
               <span class="badge">Dienstkleidung</span>
               <span class="badge">Digitale Zeiterfassung per App</span>
+              <span class="badge">Klare Ansprechpartner</span>
+              <span class="badge">Strukturierte Einarbeitung</span>
             </div>
             <div class="hero-actions" style="margin-top:20px">
               <a class="button button-primary" href="#bewerbung">Jetzt schnell bewerben</a>
-              <a class="button button-secondary" href="mailto:demo@example.com">E-Mail schreiben</a>
+              <a class="button button-secondary" href="mailto:demo@example.com" data-contact-email-href>E-Mail schreiben</a>
             </div>
           </article>
           <article class="card reveal">
@@ -71,18 +74,18 @@
         <div class="site-shell split">
           <article class="card reveal">
             <h2>Bewerbungsformular</h2>
-            <form class="form" data-mailto="demo@example.com" data-subject="Bewerbung bei der Acar Group">
+            <form class="form" data-mailto="contact" data-subject="Bewerbung bei der Acar Group">
               <div class="field-row">
-                <div class="field"><label for="name">Name</label><input id="name" name="Name" required /></div>
-                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required /></div>
+                <div class="field"><label for="name">Name</label><input id="name" name="Name" required placeholder="Vor- und Nachname" /></div>
+                <div class="field"><label for="phone">Telefonnummer</label><input id="phone" name="Telefonnummer" required placeholder="+49 ..." /></div>
               </div>
               <div class="field-row">
-                <div class="field"><label for="email">E-Mail</label><input id="email" name="E-Mail" type="email" required /></div>
-                <div class="field"><label for="city">Wohnort</label><input id="city" name="Wohnort" /></div>
+                <div class="field"><label for="email">E-Mail</label><input id="email" name="E-Mail" type="email" required placeholder="name@example.com" /></div>
+                <div class="field"><label for="city">Wohnort</label><input id="city" name="Wohnort" placeholder="Ort" /></div>
               </div>
               <div class="field-row">
-                <div class="field"><label for="experience">Berufserfahrung</label><input id="experience" name="Berufserfahrung" /></div>
-                <div class="field"><label for="license">Führerscheinklasse</label><input id="license" name="Fuehrerscheinklasse" /></div>
+                <div class="field"><label for="experience">Berufserfahrung</label><input id="experience" name="Berufserfahrung" placeholder="Kurz zusammengefasst" /></div>
+                <div class="field"><label for="license">Führerscheinklasse</label><input id="license" name="Fuehrerscheinklasse" placeholder="z. B. B, C1, C" /></div>
               </div>
               <div class="field-row">
                 <div class="field">
@@ -92,6 +95,7 @@
                     <option>Paketzusteller</option>
                     <option>Dispatcher</option>
                     <option>Personal / Verwaltung</option>
+                    <option>Quereinstieg</option>
                     <option>Sonstiges</option>
                   </select>
                 </div>
@@ -102,15 +106,25 @@
               </div>
               <div class="field">
                 <label for="message">Nachricht</label>
-                <textarea id="message" name="Nachricht" placeholder="Erzähle uns kurz mehr über dich."></textarea>
+                <textarea id="message" name="Nachricht" placeholder="Erzähle uns kurz, für welchen Bereich du dich interessierst, ab wann du verfügbar bist und welche Erfahrung du mitbringst."></textarea>
+              </div>
+              <div class="field">
+                <label>
+                  <input type="checkbox" required />
+                  Ich habe die Datenschutzhinweise zur Kenntnis genommen.
+                </label>
               </div>
               <button class="button button-primary" type="submit">Bewerbung absenden</button>
               <div class="form-status" data-form-status></div>
-              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet.</p>
+              <p class="note">Beim Absenden wird Ihr E-Mail-Programm mit den Formularangaben vorbereitet. Bitte ergänzen Sie vorab Ihre Datenschutzhinweise im Formular.</p>
             </form>
           </article>
           <article class="card reveal">
             <h2>Arbeitsplatz</h2>
+            <p style="margin-top:18px">
+              Wir suchen Menschen, die verlässlich sind und gerne praktisch arbeiten. Bei uns zählt nicht der perfekte
+              Lebenslauf, sondern die Bereitschaft, Aufgaben sauber und mit ruhiger Hand umzusetzen.
+            </p>
             <div class="image-stack" style="margin-top:18px">
               <div class="image-card"><strong>Team</strong><span>Professionelles Arbeitsumfeld mit klaren Strukturen</span></div>
               <div class="image-card"><strong>Karriere</strong><span>Operative Rollen mit Perspektive</span></div>

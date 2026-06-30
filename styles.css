@@ -144,6 +144,11 @@ textarea {
   width: 64px;
   height: 64px;
   flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .brand-logo img {
@@ -153,9 +158,46 @@ textarea {
   display: block;
 }
 
+.brand-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.brand-logo img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.brand-logo--loaded img {
+  opacity: 1;
+}
+
+.brand-logo--loaded .brand-fallback,
+.brand-logo--broken img {
+  opacity: 0;
+}
+
+.brand-logo--broken .brand-fallback {
+  opacity: 1;
+}
+
 .brand-logo-footer {
   width: 40px;
   height: 40px;
+}
+
+.brand-logo-footer .brand-fallback {
+  font-size: 0.78rem;
 }
 
 .brand-copy {
@@ -1032,6 +1074,14 @@ p {
 .main-bar .dropdown {
   background: rgba(255, 255, 255, 0.98);
   border-color: rgba(36, 94, 83, 0.08);
+}
+
+.main-bar .brand-logo {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.main-bar .brand-fallback {
+  color: #fff;
 }
 
 .hero.hero-rebuilt {

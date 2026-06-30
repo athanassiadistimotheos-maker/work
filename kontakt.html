@@ -17,8 +17,9 @@
           <div class="eyebrow">Kontakt</div>
           <h1>Kontakt aufnehmen.</h1>
           <p>
-            Acar Group GmbH, Musterstraße 12, 12345 Musterstadt. Wir sind montags bis freitags von 08:00 bis 17:00 Uhr
-            erreichbar und melden uns in der Regel zügig zurück.
+            Sie möchten einen Personalbedarf melden, eine Transportlösung besprechen oder ein operatives Projekt
+            strukturieren? Schicken Sie uns eine kurze Nachricht. Wir melden uns zeitnah zurück und klären die
+            nächsten Schritte persönlich.
           </p>
         </div>
       </section>
@@ -28,8 +29,10 @@
           <article class="card reveal">
             <h2>Kontaktdaten</h2>
             <div class="contact-card" style="margin-top:18px">
-              <div class="contact-line"><span>Adresse</span><strong>Musterstraße 12, 12345 Musterstadt</strong></div>
-              <div class="contact-line"><span>E-Mail</span><strong><a href="mailto:demo@example.com">demo@example.com</a></strong></div>
+              <div class="contact-line"><span>Firma</span><strong>Acar Group GmbH</strong></div>
+              <div class="contact-line"><span>Adresse</span><strong data-contact-address>Musterstraße 12, 12345 Musterstadt</strong></div>
+              <div class="contact-line"><span>E-Mail</span><strong><a href="mailto:demo@example.com" data-contact-email>demo@example.com</a></strong></div>
+              <div class="contact-line"><span>Telefon</span><strong><a href="tel:+491234567890" data-contact-phone>+49 123 456 78 90</a></strong></div>
               <div class="contact-line"><span>Erreichbarkeit</span><strong>Mo-Fr, 08:00-17:00 Uhr</strong></div>
             </div>
             <div class="hero-actions" style="margin-top:20px">
@@ -48,12 +51,18 @@
         <div class="site-shell split">
           <article class="card reveal">
             <h2>Kontaktformular</h2>
-            <form class="form" data-mailto="demo@example.com" data-subject="Kontaktanfrage">
+            <form class="form" data-mailto="contact" data-subject="Kontaktanfrage">
               <div class="field-row">
-                <div class="field"><label for="cname">Name</label><input id="cname" name="Name" required /></div>
-                <div class="field"><label for="cmail">E-Mail</label><input id="cmail" name="E-Mail" type="email" required /></div>
+                <div class="field"><label for="cname">Name</label><input id="cname" name="Name" required placeholder="Ihr Name" /></div>
+                <div class="field"><label for="cmail">E-Mail</label><input id="cmail" name="E-Mail" type="email" required placeholder="name@example.com" /></div>
               </div>
-              <div class="field"><label for="ctext">Nachricht</label><textarea id="ctext" name="Nachricht"></textarea></div>
+              <div class="field"><label for="ctext">Nachricht</label><textarea id="ctext" name="Nachricht" placeholder="Beschreiben Sie kurz Ihr Anliegen, den gewünschten Einsatzort und den Zeitraum. Wir melden uns mit einer ersten Einschätzung zurück."></textarea></div>
+              <div class="field">
+                <label>
+                  <input type="checkbox" required />
+                  Ich habe die Datenschutzhinweise zur Kenntnis genommen.
+                </label>
+              </div>
               <button class="button button-primary" type="submit">Kontakt senden</button>
               <div class="form-status" data-form-status></div>
             </form>
@@ -61,7 +70,7 @@
           <article class="card reveal">
             <h2>Schnelle Wege</h2>
             <div class="hero-actions" style="margin-top:18px">
-              <a class="button button-secondary" href="mailto:demo@example.com">E-Mail</a>
+              <a class="button button-secondary" href="mailto:demo@example.com" data-contact-email-href>E-Mail</a>
               <a class="button button-secondary" href="kontakt.html">Kontaktseite</a>
               <a class="button button-primary" href="kundenanfrage.html">Angebot anfordern</a>
             </div>
