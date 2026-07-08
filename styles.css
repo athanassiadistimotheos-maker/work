@@ -13,8 +13,8 @@
   --muted-dark: rgba(255, 255, 255, 0.74);
   --accent: #ff3b30;
   --accent-soft: rgba(255, 59, 48, 0.12);
-  --radius: 16px;
-  --radius-sm: 12px;
+  --radius: 10px;
+  --radius-sm: 8px;
   --container: 1280px;
   --shadow: 0 18px 40px rgba(13, 17, 23, 0.08);
 }
@@ -88,7 +88,7 @@ textarea {
   background: var(--accent);
   color: #fff;
   padding: 10px 14px;
-  border-radius: var(--radius);
+  border-radius: 8px;
   z-index: 1000;
 }
 
@@ -121,7 +121,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px 18px;
+  padding: 12px 18px;
   width: 100%;
   border-radius: 0;
   background: transparent;
@@ -141,12 +141,12 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   flex: 0 0 auto;
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 10px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
@@ -192,8 +192,8 @@ textarea {
 }
 
 .brand-logo-footer {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
 }
 
 .brand-logo-footer .brand-fallback {
@@ -353,7 +353,7 @@ textarea {
   min-height: 46px;
   padding: 0 16px;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 8px;
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -531,7 +531,7 @@ p {
   position: relative;
   min-height: 640px;
   border: 1px solid rgba(13, 17, 23, 0.12);
-  border-radius: 28px;
+  border-radius: 14px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(13, 17, 23, 0.28)),
     radial-gradient(circle at 24% 26%, rgba(255, 59, 48, 0.16), transparent 26%),
@@ -726,7 +726,7 @@ p {
 .card {
   padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 14px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
@@ -770,7 +770,7 @@ p {
   min-height: 34px;
   padding: 0 12px;
   border: 1px solid rgba(255, 59, 48, 0.16);
-  border-radius: 999px;
+  border-radius: 8px;
   background: rgba(255, 59, 48, 0.06);
   color: var(--text);
   font-size: 0.78rem;
@@ -846,7 +846,7 @@ p {
 .section-band {
   padding: 30px;
   border: 1px solid rgba(255, 59, 48, 0.12);
-  border-radius: 24px;
+  border-radius: 16px;
   background: linear-gradient(180deg, rgba(17, 21, 28, 0.98), rgba(13, 17, 23, 0.98));
   color: #fff;
   box-shadow: var(--shadow);
@@ -963,7 +963,7 @@ p {
   min-height: 230px;
   padding: 18px;
   border: 1px solid rgba(255, 59, 48, 0.12);
-  border-radius: 24px;
+  border-radius: 14px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(13, 17, 23, 0.44)),
     linear-gradient(160deg, #dadbdd, #c6c7cb 60%, #b6b8bd);
@@ -987,7 +987,7 @@ p {
   display: inline-flex;
   padding: 8px 10px;
   border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 999px;
+  border-radius: 8px;
   color: #11151c;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1104,7 +1104,7 @@ p {
   width: min(100%, 560px);
   margin-left: auto;
   padding: 34px;
-  border-radius: 28px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(13, 17, 23, 0.5);
   backdrop-filter: blur(12px);
@@ -1134,7 +1134,7 @@ p {
   align-items: center;
   min-height: 32px;
   padding: 0 12px;
-  border-radius: 999px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
@@ -1155,7 +1155,7 @@ p {
   gap: 20px;
   align-items: end;
   padding: 28px 32px;
-  border-radius: 28px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
   border: 1px solid rgba(13, 17, 23, 0.08);
@@ -1182,7 +1182,7 @@ p {
   display: grid;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 16px;
   background: #fff;
   box-shadow: var(--shadow);
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -1239,20 +1239,20 @@ p {
 
 .split-card {
   padding: 32px;
-  border-radius: 28px;
+  border-radius: 16px;
   border: 1px solid rgba(13, 17, 23, 0.08);
   background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
 }
 
 .split-card-image {
-  padding: 18px;
+  padding: 14px;
 }
 
 .split-visual {
   min-height: 100%;
   min-height: 360px;
-  border-radius: 22px;
+  border-radius: 14px;
   background-size: cover;
   background-position: center;
 }
@@ -1272,7 +1272,7 @@ p {
 .contact-band {
   padding: 28px;
   border: 1px solid rgba(13, 17, 23, 0.08);
-  border-radius: 32px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
 }
@@ -1287,7 +1287,7 @@ p {
 .contact-image-card,
 .contact-details,
 .partner-band {
-  border-radius: 28px;
+  border-radius: 14px;
   border: 1px solid rgba(13, 17, 23, 0.08);
   background: #fff;
   box-shadow: var(--shadow);
@@ -1347,7 +1347,7 @@ p {
 
 .footer-shell {
   padding: 28px;
-  border-radius: 32px 32px 0 0;
+  border-radius: 16px 16px 0 0;
   background: linear-gradient(180deg, #11151c, #0d1117);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: var(--shadow);
@@ -1452,7 +1452,7 @@ p {
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--text);
-  border-radius: 18px;
+  border-radius: 12px;
 }
 
 .map-placeholder {
