@@ -1217,7 +1217,7 @@ p {
 .service-media-personal {
   background-image:
     linear-gradient(180deg, rgba(13, 17, 23, 0.08), rgba(13, 17, 23, 0.48)),
-    url('assets/driver.png');
+    url('assets/personal.png');
 }
 
 .service-media-full {
